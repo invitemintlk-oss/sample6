@@ -87,7 +87,7 @@ export default function SaveTheDate() {
       <div className="relative" ref={ref}>
         <div
           className="overflow-hidden rounded-2xl"
-          style={{ background: C.card, border: "1px solid rgba(199, 162, 75, 0.4)", boxShadow: "0 18px 38px -28px rgba(74, 97, 81, 0.35)" }}
+          style={{ background: C.card, border: "1px solid rgba(199, 162, 75, 0.4)", boxShadow: "0 18px 38px -28px rgba(61, 90, 128, 0.35)" }}
         >
           <button
             type="button"
@@ -98,7 +98,7 @@ export default function SaveTheDate() {
             className="flex w-full items-center gap-4 px-4 py-4 text-left transition-colors hover:bg-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 sm:px-5"
             style={{ ["--tw-ring-color" as string]: "rgba(199, 162, 75, 0.6)" }}
           >
-            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, #4A6151, #3E5341)", color: C.cream }}>
+            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full" style={{ background: "linear-gradient(135deg, #3D5A80, #2E4A70)", color: C.cream }}>
               <CalendarHeart />
             </span>
             <span className="min-w-0 flex-1">
@@ -107,7 +107,7 @@ export default function SaveTheDate() {
               </span>
               <motion.span
                 className="mt-0.5 block text-xs"
-                style={{ color: "rgba(58, 64, 57, 0.65)" }}
+                style={{ color: "rgba(54, 64, 77, 0.65)" }}
                 initial={{ opacity: 0, y: 4 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -116,7 +116,7 @@ export default function SaveTheDate() {
                 Add the wedding to your calendar
               </motion.span>
             </span>
-            <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full" style={{ backgroundColor: "rgba(74, 97, 81, 0.06)" }} aria-hidden="true">
+            <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full" style={{ backgroundColor: "rgba(61, 90, 128, 0.06)" }} aria-hidden="true">
               <ChevronDown className="h-4 w-4 transition-transform duration-200" style={{ color: C.green, transform: open ? "rotate(180deg)" : "none" }} />
             </span>
           </button>

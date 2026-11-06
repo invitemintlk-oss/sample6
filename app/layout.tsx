@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: { images: ["/og.jpg"] },
 };
 
-export const viewport: Viewport = { themeColor: "#4A6151" };
+export const viewport: Viewport = { themeColor: "#3D5A80" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const fonts = [cinzel, mea, montserrat, cormorant, playfair, marcellus].map((f) => f.variable).join(" ");

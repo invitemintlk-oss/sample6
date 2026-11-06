@@ -1,4 +1,4 @@
-# Wedding Invitation — Nethmi & Kavindu
+# Wedding Invitation — Dinithi & Chamath
 
 Next.js 15 + Tailwind CSS v4 + Framer Motion digital wedding invitation.
 

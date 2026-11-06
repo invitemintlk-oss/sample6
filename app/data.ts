@@ -2,15 +2,15 @@
 
 export const C = {
   bg: "#FBF8F1",
-  ink: "#3A4039",
-  green: "#4A6151",
-  greenDark: "#2F4137",
-  greenMid: "#587261",
-  greenDeep: "#3E5341",
-  sage: "#8FA58B",
+  ink: "#36404D",
+  green: "#3D5A80",
+  greenDark: "#23395B",
+  greenMid: "#5477A0",
+  greenDeep: "#2E4A70",
+  sage: "#8FAACB",
   gold: "#C7A24B",
   goldLight: "#D8BE84",
-  muted: "#79817A",
+  muted: "#77808C",
   card: "#FFFDF8",
   cream: "#F6EFDD",
 };
@@ -25,36 +25,39 @@ export const F = {
 };
 
 export const invitation = {
-  bride: "Nethmi",
-  groom: "Kavindu",
-  initials: ["N", "K"] as const,
+  bride: "Dinithi",
+  groom: "Chamath",
+  initials: ["D", "C"] as const,
   // ISO date-time with Sri Lanka offset — drives the countdown & calendar links
-  weddingStart: "2027-12-12T09:45:00+05:30",
-  weddingEnd: "2027-12-12T23:30:00+05:30",
-  dateLong: "Sunday, December 12, 2027",
-  dateShort: "12 . 12 . 27",
-  rsvpBy: "Kindly respond by the 15th of November 2027",
-  maxGuests: 4,
+  weddingStart: "2027-08-21T10:15:00+05:30",
+  weddingEnd: "2027-08-21T23:00:00+05:30",
+  dateLong: "Saturday, August 21, 2027",
+  dateShort: "21 . 08 . 27",
+  rsvpBy: "Kindly respond by the 20th of July 2027",
+  maxGuests: 3,
 
   // Photos (set to null to show the "Your photo" placeholder)
   heroPhoto: "/photos/hero.webp" as string | null,
   storyPhoto: "/photos/story.webp" as string | null,
 
+  // Full-screen intro video played before the curtain opens
+  introVideo: "/photos/i_want_to_add_a_pink_touch_to.mp4",
+
 
   events: [
-    { icon: "rings", title: "PORUWA CEREMONY", time: "9:45 AM", place: "Jetwing Lighthouse, Galle", detail: "Traditional Poruwa ceremony on the Ocean Lawn" },
-    { icon: "utensils", title: "RECEPTION", time: "6:30 PM", place: "Jetwing Lighthouse, Galle", detail: "Dinner, music and dancing in the Ballroom" },
+    { icon: "rings", title: "PORUWA CEREMONY", time: "10:15 AM", place: "Cinnamon Grand, Colombo", detail: "Traditional Poruwa ceremony in the Lotus Garden" },
+    { icon: "utensils", title: "RECEPTION", time: "7:00 PM", place: "Cinnamon Grand, Colombo", detail: "Dinner, music and dancing in the Oak Room" },
   ],
 
   dressCode: {
-    title: "Formal / Traditional",
-    text: "Sarees, osariyas and suits in soft sage, olive green, ivory or gold would be lovely.",
-    palette: ["#4A6151", "#8FA58B", "#F8F3EA", "#D8BE84", "#C7A24B"],
+    title: "Formal / Pastel",
+    text: "Sarees, osariyas and suits in powder blue, navy, ivory, silver or soft gold would be lovely.",
+    palette: ["#2E4A70", "#8FAACB", "#F8F3EA", "#C9CED6", "#D8BE84"],
   },
 
   venue: {
-    name: "Jetwing Lighthouse",
-    address: "Dadella, Galle 80000, Sri Lanka",
+    name: "Cinnamon Grand Colombo",
+    address: "77 Galle Road, Colombo 00300, Sri Lanka",
   },
 
 };

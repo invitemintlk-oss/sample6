@@ -133,7 +133,7 @@ export default function Rsvp() {
                 <button
                   type="submit"
                   className="inline-flex w-full items-center justify-center gap-2.5 rounded-full py-4 text-[0.8rem] font-semibold uppercase tracking-[0.22em] transition-transform duration-200 hover:-translate-y-0.5 active:scale-95"
-                  style={{ fontFamily: F.sans, background: "linear-gradient(135deg,#587261,#3E5341)", color: C.cream, boxShadow: "0 14px 30px -12px rgba(47,65,55,0.55)" }}
+                  style={{ fontFamily: F.sans, background: "linear-gradient(135deg,#5477A0,#2E4A70)", color: C.cream, boxShadow: "0 14px 30px -12px rgba(35,57,91,0.55)" }}
                 >
                   <Send className="h-3.5 w-3.5" aria-hidden />
                   Send our RSVP
@@ -155,7 +155,7 @@ function CountBtn({ label, onClick, disabled, children }: { label: string; onCli
       onClick={onClick}
       disabled={disabled}
       className="grid h-11 w-11 place-items-center rounded-full text-xl transition-all hover:opacity-80 active:scale-90 disabled:cursor-not-allowed disabled:opacity-40"
-      style={{ background: "rgba(74, 97, 81, 0.1)", color: C.green, border: "1px solid rgba(199, 162, 75, 0.5)" }}
+      style={{ background: "rgba(61, 90, 128, 0.1)", color: C.green, border: "1px solid rgba(199, 162, 75, 0.5)" }}
     >
       {children}
     </button>

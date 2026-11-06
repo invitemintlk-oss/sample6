@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { C, F, invitation as inv } from "../data";
 import Countdown from "./Countdown";
 import Curtain from "./Curtain";
+import IntroVideo from "./IntroVideo";
 import Rsvp from "./Rsvp";
 import SaveTheDate from "./SaveTheDate";
 import { archCard, DiamondDivider, Photo, Reveal, RingsIcon, SectionTitle } from "./ui";
@@ -23,15 +24,15 @@ const PETALS: [number, number, number, number, number, string, number][] = [
   [4, 13, 15, 0, 4.5, "#F6F1E6", 0.5],
   [12, 9, 19, 4, 5.5, "#EFE6D0", 0.4],
   [22, 16, 13, 7, 4, "#FBF4EA", 0.45],
-  [31, 8, 21, 2, 6, "#E2E9DF", 0.35],
+  [31, 8, 21, 2, 6, "#E1EAF5", 0.35],
   [40, 12, 16, 9, 5, "#F6F1E6", 0.5],
   [49, 10, 18, 5, 4.5, "#EFE6D0", 0.4],
   [58, 15, 14, 11, 4, "#FBF4EA", 0.45],
-  [66, 9, 20, 1, 6, "#E2E9DF", 0.35],
+  [66, 9, 20, 1, 6, "#E1EAF5", 0.35],
   [74, 13, 16, 8, 5, "#F6F1E6", 0.5],
   [82, 8, 22, 3, 5.5, "#EFE6D0", 0.35],
   [90, 14, 15, 6, 4, "#FBF4EA", 0.45],
-  [96, 10, 18, 10, 5, "#E2E9DF", 0.4],
+  [96, 10, 18, 10, 5, "#E1EAF5", 0.4],
 ];
 
 const mapQuery = encodeURIComponent(`${inv.venue.name}, ${inv.venue.address}`);
@@ -87,7 +88,7 @@ export default function Invitation() {
         fontSize: 17,
         lineHeight: 1.6,
         backgroundImage:
-          "radial-gradient(1200px 600px at 82% -6%, rgba(199, 162, 75, 0.1), transparent 60%), radial-gradient(900px 520px at -12% 26%, rgba(143, 165, 139, 0.12), transparent 60%)",
+          "radial-gradient(1200px 600px at 82% -6%, rgba(199, 162, 75, 0.1), transparent 60%), radial-gradient(900px 520px at -12% 26%, rgba(143, 170, 203, 0.12), transparent 60%)",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         isolation: "isolate",
@@ -95,6 +96,7 @@ export default function Invitation() {
     >
       <audio ref={audio} src="/eucalyptus-seal/music.mp3" loop preload="auto" />
       <Curtain open={opened} onOpen={open} />
+      <IntroVideo />
 
       {/* backdrops */}
       <div
@@ -102,10 +104,10 @@ export default function Invitation() {
         className="pointer-events-none fixed inset-0"
         style={{
           zIndex: -1,
-          backgroundColor: "#F4F1EC",
-          backgroundImage: "linear-gradient(rgba(251, 248, 241, 0.62), rgba(251, 248, 241, 0.62)), url(/eucalyptus-seal/backdrop-floral.webp)",
+          backgroundColor: "#EEF4FB",
+          backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/eucalyptus-seal/backdrop-watercolor.webp)",
           backgroundSize: "cover",
-          backgroundPosition: "center top",
+          backgroundPosition: "center",
         }}
       />
 
@@ -362,7 +364,7 @@ export default function Invitation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 self-center rounded-full px-7 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] transition-transform duration-200 hover:-translate-y-0.5 active:scale-95"
-                style={{ fontFamily: F.sans, background: "linear-gradient(135deg,#587261,#3E5341)", color: C.cream, boxShadow: "0 14px 26px -14px rgba(47,65,55,0.7)" }}
+                style={{ fontFamily: F.sans, background: "linear-gradient(135deg,#5477A0,#2E4A70)", color: C.cream, boxShadow: "0 14px 26px -14px rgba(35,57,91,0.7)" }}
               >
                 <MapPin className="h-4 w-4" strokeWidth={1.6} aria-hidden /> Open in Maps
               </a>
@@ -382,7 +384,7 @@ export default function Invitation() {
             className="relative overflow-hidden px-7 py-14 text-center sm:px-16 sm:py-20"
             style={{
               background:
-                "radial-gradient(120% 80% at 50% 0%, rgba(143,165,139,0.26) 0%, transparent 55%), radial-gradient(100% 78% at 50% 120%, rgba(199,162,75,0.2) 0%, transparent 60%), linear-gradient(165deg,#587261 0%,#2F4137 100%)",
+                "radial-gradient(120% 80% at 50% 0%, rgba(143,170,203,0.26) 0%, transparent 55%), radial-gradient(100% 78% at 50% 120%, rgba(199,162,75,0.2) 0%, transparent 60%), linear-gradient(165deg,#5477A0 0%,#23395B 100%)",
               color: C.cream,
               borderRadius: "clamp(40px,8vw,90px) clamp(40px,8vw,90px) 30px 30px",
               boxShadow: "0 40px 80px -44px rgba(70,40,30,0.6)",
@@ -397,7 +399,7 @@ export default function Invitation() {
             <div className="relative">
               <div
                 className="mx-auto mb-8 w-[min(72%,280px)] overflow-hidden"
-                style={{ aspectRatio: "2 / 3", borderRadius: "200px 200px 16px 16px", border: "1px solid rgba(216,190,132,0.6)", boxShadow: "0 24px 48px -24px rgba(10,20,14,0.7)", padding: 6, background: "rgba(255,253,248,0.12)" }}
+                style={{ aspectRatio: "2 / 3", borderRadius: "200px 200px 16px 16px", border: "1px solid rgba(216,190,132,0.6)", boxShadow: "0 24px 48px -24px rgba(10,16,30,0.7)", padding: 6, background: "rgba(255,253,248,0.12)" }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

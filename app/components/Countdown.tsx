@@ -31,7 +31,7 @@ export default function Countdown() {
         className="relative px-6 py-16 sm:py-24"
         style={{
           background:
-            "radial-gradient(130% 95% at 50% 0%, rgba(143,165,139,0.28) 0%, transparent 58%), radial-gradient(95% 75% at 50% 122%, rgba(199,162,75,0.18) 0%, transparent 60%), linear-gradient(135deg,#4A6151 0%,#2F4137 100%)",
+            "radial-gradient(130% 95% at 50% 0%, rgba(143,170,203,0.28) 0%, transparent 58%), radial-gradient(95% 75% at 50% 122%, rgba(199,162,75,0.18) 0%, transparent 60%), linear-gradient(135deg,#3D5A80 0%,#23395B 100%)",
           borderTop: "1px solid rgba(216,190,132,0.45)",
           borderBottom: "1px solid rgba(216,190,132,0.45)",
         }}
