@@ -5,7 +5,6 @@ import { MapPin, Shirt, Utensils } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { C, F, invitation as inv } from "../data";
 import Countdown from "./Countdown";
-import Curtain from "./Curtain";
 import IntroVideo from "./IntroVideo";
 import Rsvp from "./Rsvp";
 import SaveTheDate from "./SaveTheDate";
@@ -55,7 +54,14 @@ export default function Invitation() {
 
   const open = () => {
     setOpened(true);
-    audio.current?.play().catch(() => {});
+    const a = audio.current;
+    if (!a) return;
+    // browsers may block music without a tap — if so, start it on the first interaction
+    a.play().catch(() => {
+      const start = () => a.play().catch(() => {});
+      window.addEventListener("pointerdown", start, { once: true });
+      window.addEventListener("keydown", start, { once: true });
+    });
   };
 
     // highlight the nav link for the section in view
@@ -95,8 +101,7 @@ export default function Invitation() {
       }}
     >
       <audio ref={audio} src="/eucalyptus-seal/music.mp3" loop preload="auto" />
-      <Curtain open={opened} onOpen={open} />
-      <IntroVideo />
+      <IntroVideo onDone={open} />
 
       {/* backdrops */}
       <div

@@ -2,14 +2,29 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { F, invitation as inv } from "../data";
 
-/** Full-screen intro video shown before the curtain. Plays muted (browser autoplay rule); ends or skips into the curtain. */
-export default function IntroVideo() {
-  const [done, setDone] = useState(false);
+/** Full-screen intro video. Plays muted (browser autoplay rule); when it ends or is skipped, the invitation opens. */
+export default function IntroVideo({ onDone }: { onDone: () => void }) {
+  const [done, setDoneState] = useState(false);
   const [muted, setMuted] = useState(true);
   const video = useRef<HTMLVideoElement>(null);
+
+  const setDone = (v: true) => {
+    if (done) return;
+    setDoneState(v);
+    video.current?.pause();
+    onDone();
+  };
+
+  // lock page scroll while the intro is playing
+  useEffect(() => {
+    document.documentElement.style.overflow = done ? "" : "hidden";
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [done]);
 
   const toggleSound = () => {
     const v = video.current;
